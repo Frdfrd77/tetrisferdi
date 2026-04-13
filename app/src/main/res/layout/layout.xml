@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- Game View -->
+    <com.example.tetris.GameView
+        android:id="@+id/gameView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Game Controls (Visible during gameplay) -->
+    <Button
+        android:id="@+id/dropButton"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="↓"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:visibility="gone" />
+
+    <!-- Welcome Screen Overlay -->
+    <LinearLayout
+        android:id="@+id/welcomeScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FerdiTetris"
+            android:textColor="#00FFFF"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="★ CREATED BY ★\nFERDI DURMAZ"
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:textStyle="bold|italic"
+            android:textAlignment="center"
+            android:layout_marginBottom="50dp"
+            android:shadowColor="#00FFFF"
+            android:shadowRadius="5"/>
+
+        <Button
+            android:id="@+id/startButton"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="START GAME"
+            android:padding="16dp"
+            android:textSize="18sp"
+            android:backgroundTint="#0088FF"/>
+    </LinearLayout>
+
+    <!-- Restart Button (Visible on Game Over) -->
+    <Button
+        android:id="@+id/restartButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="RESTART"
+        android:visibility="gone"
+        android:padding="20dp"
+        android:textSize="20sp" />
+
+</FrameLayout>
